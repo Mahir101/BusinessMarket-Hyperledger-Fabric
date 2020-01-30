@@ -2,7 +2,7 @@
 
 # Commands: Chaincode Instantiation
 
-1.cd fabric/fabric-samples/bebshabazar
+1. cd fabric/fabric-samples/bebshabazar
 2. ./run.sh
 
 # Node server
