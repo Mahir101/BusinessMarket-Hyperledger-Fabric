@@ -6,8 +6,8 @@
 2. ./run.sh
 
 # Node server
-
-1. node app 
+1. cd fabric/fabric-samples/bebshabazar/javascript
+2. node app 
 
 # localhost:8000
 - Change the port number in app.js
