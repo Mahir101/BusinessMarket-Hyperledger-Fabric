@@ -1,0 +1,32 @@
+<h1>Admin Product Verification</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Verified</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each ob}}
+        <tr>
+            <td><img src="Uploads/{{this.Record.Imagepath}}" height="30" width="40"></td>
+            <td>{{this.Record.Manid}}</td>
+            <td>{{this.Record.Title}}</td>
+            <td>{{this.Record.Description}}</td>
+            <td>{{this.Record.Price}}</td>
+            <td>{{this.Record.Category}}</td>
+            <td>{{this.Record.Verified}}</td>
+            <td>
+                <form action="/admin/verifyproducts/{{this.Key}}" method="POST">
+                    <input type="submit" name="submit" id="submit" value="Verify">
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

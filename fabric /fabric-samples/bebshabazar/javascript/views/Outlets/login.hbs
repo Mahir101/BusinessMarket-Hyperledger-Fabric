@@ -1,0 +1,32 @@
+<div class="container-fluid"  style="margin-top:50px; margin-bottom:100px">
+    <div class="row">
+        <div class="col-xs-5 col-xs-offset-4">
+            <div class="container-login">
+                <h1>Manufacturer Login Page</h1>
+                {{#if hasErrors}}
+                <div class="alert alert-danger">
+                    {{# each messages }}
+                    <p>{{this}}</p>
+                    {{/each}}
+                </div>
+                {{/if}}
+                <form action="/seller/login" method="post">
+
+                    <div class="form-group">
+                        <label for="email">E-Mail</label>
+                        <input type="text" id="email" name="email" class="form-control" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control" required="">
+                    </div>
+                    {{!-- <input type="hidden" name="_csrf" value="{{ csrfToken }}"> --}}
+
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                </form>
+                <p>Don't have an account? <a href="/seller/signup">Sign up!</a></p>
+            </div>
+        </div>
+    </div>
+</div>

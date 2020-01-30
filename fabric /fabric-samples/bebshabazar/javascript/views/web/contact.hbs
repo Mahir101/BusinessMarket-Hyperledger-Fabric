@@ -1,0 +1,104 @@
+<!-- banner-2 -->
+<div class="page-head_agile_info_w3l">
+
+</div>
+<!-- //banner-2 -->
+<!-- page -->
+<div class="services-breadcrumb">
+	<div class="agile_inner_breadcrumb">
+		<div class="container">
+			<ul class="w3_short">
+				<li>
+					<a href="/">Home</a>
+					<i>|</i>
+				</li>
+				<li>Contact Us</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- //page -->
+
+<!-- contact -->
+<div class="contact py-sm-5 py-4">
+	<div class="container py-xl-4 py-lg-2">
+		<!-- tittle heading -->
+		<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+			<span>C</span>ontact
+			<span>U</span>s
+		</h3>
+		<!-- //tittle heading -->
+		<div class="row contact-grids agile-1 mb-5">
+			<div class="col-sm-4 contact-grid agileinfo-6 mt-sm-0 mt-2">
+				<div class="contact-grid1 text-center">
+					<div class="con-ic">
+						<i class="fas fa-map-marker-alt rounded-circle"></i>
+					</div>
+					<h4 class="font-weight-bold mt-sm-4 mt-3 mb-3">Address</h4>
+					<p>Shahjalal University of Science and Technology
+						<label>Bangladesh.</label>
+					</p>
+				</div>
+			</div>
+			<div class="col-sm-4 contact-grid agileinfo-6 my-sm-0 my-4">
+				<div class="contact-grid1 text-center">
+					<div class="con-ic">
+						<i class="fas fa-phone rounded-circle"></i>
+					</div>
+					<h4 class="font-weight-bold mt-sm-4 mt-3 mb-3">Call Us</h4>
+					<p>+8801712232327
+						<label></label>
+					</p>
+				</div>
+			</div>
+			<div class="col-sm-4 contact-grid agileinfo-6">
+				<div class="contact-grid1 text-center">
+					<div class="con-ic">
+						<i class="fas fa-envelope-open rounded-circle"></i>
+					</div>
+					<h4 class="font-weight-bold mt-sm-4 mt-3 mb-3">Email</h4>
+					<p>
+						<label>
+							<a href="mailto:mdmahirlabib@gmail.com">mdmahirlabib@gmail.com</a>
+						</label>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- form -->
+		<form action="/contact" method="post">
+
+			<div class="contact-grids1 w3agile-6">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 contact-form1 form-group">
+						<label class="col-form-label">Name</label>
+						<input id="name" type="text" class="form-control" name="name" placeholder="" required="">
+					</div>
+					<div class="col-md-6 col-sm-6 contact-form1 form-group">
+						<label class="col-form-label">E-mail</label>
+						<input id="email" type="email" class="form-control" name="email" placeholder="" required="">
+					</div>
+				</div>
+				<div class="contact-me animated wow slideInUp form-group">
+					<label class="col-form-label">Message</label>
+					<textarea id="message" name="message" class="form-control" placeholder="" required=""> </textarea>
+				</div>
+
+			</div>
+
+			<input type="hidden" name="_csrf" value="{{ csrfToken }}">
+			<button type="submit" class="btn btn-primary">Submit</button>
+
+		</form>
+		<!-- //form -->
+	</div>
+</div>
+<!-- //contact -->
+
+<!-- map -->
+<div class="map mt-sm-0 mt-4">
+	<iframe
+		src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1865060.9000874348!2d89.31477553636131!3d24.06059081884965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgoogle%20map%20link%20of%20bangladesh!5e0!3m2!1sen!2sbd!4v1572785068278!5m2!1sen!2sbd"
+		width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</div>
+<!-- //map -->

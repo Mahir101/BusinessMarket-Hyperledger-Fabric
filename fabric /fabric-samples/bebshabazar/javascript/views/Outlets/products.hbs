@@ -1,0 +1,36 @@
+<div  style="margin-top:50px; margin-bottom:100px">
+    </div>
+<h3><a class="btn btn-secondary" href="/seller/add"><i class="fa fa-plus"></i> Create New</a> 
+<form action="/seller/logout" method="post">
+ <button type="submit" class="btn btn-primary pull-right">Log out</button>
+</form>
+<table class="table table-striped" >
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Verified</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each prods}}
+        <tr>
+            <td><img src="Uploads/{{this.Record.Imagepath}}" height="30" width="40" ></td>
+            <td>{{this.Record.Title}}</td>
+            <td>{{this.Record.Description}}</td>
+            <td>{{this.Record.Price}}</td>
+            <td>
+                <a href="/seller/update/{{this.Key}}"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i></a>
+                <a href="/seller/delete/{{this.Key}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<div  style="margin-top:300px; margin-bottom:10px">
+    </div>

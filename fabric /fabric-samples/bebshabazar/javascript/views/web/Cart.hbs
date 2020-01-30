@@ -1,0 +1,129 @@
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+<!-- banner-2 -->
+<div class="page-head_agile_info_w3l">
+
+</div>
+<!-- //banner-2 -->
+<!-- page -->
+<div class="services-breadcrumb">
+	<div class="agile_inner_breadcrumb">
+		<div class="container">
+			<ul class="w3_short">
+				<li>
+					<a href="/">Home</a>
+					<i>|</i>
+				</li>
+				<li>Cart</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- //page -->
+<!-- checkout page -->
+
+
+
+
+<div class="privacy py-sm-5 py-4">
+	<div class="container py-xl-4 py-lg-2">
+		<!-- tittle heading -->
+		<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+			<span>C</span>art
+		</h3>
+
+
+
+		{{# if products }}
+		<div class="checkout-right">
+			<h4 class="mb-sm-4 mb-3">Your shopping cart contains:
+				<span>{{this.size}}</span>
+			</h4>
+			<div class="table-responsive">
+				<table class="timetable_sub">
+					<thead>
+						<tr>
+							
+							<th>Product Name</th>
+							<th>Quantity</th>
+							<th>Price</th>
+							<th>Remove</th>
+						</tr>
+					</thead>
+					{{# each products }}
+					
+					<tbody>
+						
+						<tr class="rem1">
+							
+							<td class="invert">{{this.item.Record.Title}}</td>
+							<td class="invert">
+								<div class="quantity">
+									<div class="quantity-select">
+										<a href="/reduce/{{this.item.Key}}">
+										<div class="entry value-minus">&nbsp;</div>
+										</a>
+										<div class="entry value">
+											<span>{{ this.qty }}</span>
+										</div>
+										<a href="/increase/{{this.item.Key}}">
+										<div class="entry value-plus active">&nbsp;</div>
+										</a>
+									</div>
+								</div>
+							</td>
+
+							
+							<td class="invert">৳{{ this.Price }}</td>
+							<td class="invert">
+								<a href="/remove/{{this.item.Key}}">
+								<div class="rem">
+									
+									<div class="close1"> 
+										
+									</div>
+									
+								</div>
+								</a>
+								
+							</td>
+						</tr>
+
+
+					</tbody>
+					{{/each}}
+				</table>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-sm-3">
+				<strong>Total: {{ totalPrice }}</strong>
+			</div>
+		</div>
+
+		<hr>
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-right">
+				<a href="/checkout" type="button" class="btn btn-success pull-right">Checkout</a>
+			</div>
+		</div>
+
+
+		{{ else }}
+		<div class="container" style="padding-top:10px;padding-bottom:400px">
+			<div class="row">
+				<div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+					<h2>No items is added in the Cart</h2>
+					<h6>Please go back and add items into the cart.</h3>
+				</div>
+			</div>
+		</div>
+		{{/if}}
+
+		<!-- ekhane sesh-->
+		
+	</div>
+</div>
+<!-- //checkout page -->

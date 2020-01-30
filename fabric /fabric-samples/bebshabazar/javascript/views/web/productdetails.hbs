@@ -1,0 +1,307 @@
+
+<div class="banner-bootom-w3-agileits py-5">
+	<div class="container py-xl-4 py-lg-2">
+
+		<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+			<span>P</span>roduct
+			<span>D</span>etails</h3>
+		{{#each prods}}
+		<div class="row">
+			<div class="col-lg-5 col-md-8 single-right-left ">
+				<div class="grid images_3_of_2">
+					<div class="flexslider">
+						<ul class="slides">
+							<li data-thumb="Uploads/{{this.Record.Imagepath}}">
+								<div class="thumb-image">
+									<img src="Uploads/{{this.Record.Imagepath}}" data-imagezoom="true" class="img-fluid"
+										alt=""> </div>
+							</li>
+							<li data-thumb="Uploads/{{this.Record.Imagepath}}">
+								<div class="thumb-image">
+									<img src="Uploads/{{this.Record.Imagepath}}" data-imagezoom="true" class="img-fluid"
+										alt=""> </div>
+							</li>
+							<li data-thumb="Uploads/{{this.Record.Imagepath}}">
+								<div class="thumb-image">
+									<img src="Uploads/{{this.Record.Imagepath}}" data-imagezoom="true" class="img-fluid"
+										alt=""> </div>
+							</li>
+						</ul>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7 single-right-left simpleCart_shelfItem">
+				<h3 class="mb-3">PRODUCT NAME: {{this.Record.Title}}</h3>
+				<p class="mb-3">
+					<span class="item_price">BDT. {{this.Record.Price}}</span>
+					{{!-- <del class="mx-2 font-weight-light">{{prods.description}}</del> --}}
+
+				</p>
+				<h3>Description</he>
+					<p class="mb-3">
+						<span class="item_price">{{this.Record.Description}}</span>
+					</p>
+
+					<a href="/add-to-cart/{{this.Key}}" class="btn btn-primary" role="button">Add to Cart</a>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</div>
+
+
+
+{{#if log}}
+<div class="container">
+<form action="/discuss/{{proid}}" method="post">
+	
+		<div class="form-group">
+			<label class="col-form-label">Enter your comment</label>
+			<input id="comx" type="text" class="form-control" name="comx" required="">
+		</div>
+
+		<button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+</div>
+
+{{else}}
+
+<div class="container">
+	<h1>Login to post comment</h1>
+</div>
+
+{{/if}}
+
+
+<div class="">
+<h1>Discussions</h1>
+{{#if dis}}
+
+{{#each dis}}
+
+<div class="container">
+	<div class="row">
+		<h5 style="background-color:DodgerBlue;"> {{this.Record.Userid}} </h5>
+		<h6>Time: {{this.Record.Date}}</h6>
+	</div>
+	<p style="background-color:Tomato;"> {{this.Record.Discussion}} </p>
+
+</div>
+
+{{/each}}
+
+{{else}}
+
+<h3>There is nothing to show!</h3>
+
+{{/if}}
+
+
+                
+
+
+
+
+{{!-- <script src="js/jquery.magnific-popup.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+
+		});
+	</script>
+	<script src="js/imagezoom.js"></script>
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+	<script src="js/jquery.flexslider.js"></script>
+
+	
+	<script>
+		// Can also be used with $(document).ready()
+		$(window).load(function () {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				controlNav: "thumbnails"
+			});
+		});
+	</script>
+
+	<script src="js/move-top.js"></script>
+
+	<script src="js/easing.js"></script>
+	
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(prods.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+
+		<!-- popup modal (for location)-->
+	 --}}
+
+
+<!-- js-files -->
+<!-- jquery -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<!-- //jquery -->
+
+<!-- nav smooth scroll -->
+<script>
+	$(document).ready(function () {
+		$(".dropdown").hover(
+			function () {
+				$('.dropdown-menu', prods).stop(true, true).slideDown("fast");
+				$(prods).toggleClass('open');
+			},
+			function () {
+				$('.dropdown-menu', prods).stop(true, true).slideUp("fast");
+				$(prods).toggleClass('open');
+			}
+		);
+	});
+</script>
+<!-- //nav smooth scroll -->
+
+<!-- popup modal (for location)-->
+<script src="js/jquery.magnific-popup.js"></script>
+<script>
+	$(document).ready(function () {
+		$('.popup-with-zoom-anim').magnificPopup({
+			type: 'inline',
+			fixedContentPos: false,
+			fixedBgPos: true,
+			overflowY: 'auto',
+			closeBtnInside: true,
+			preloader: false,
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in'
+		});
+
+	});
+</script>
+<!-- //popup modal (for location)-->
+
+<!-- cart-js -->
+<script src="js/minicart.js"></script>
+<script>
+	paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
+
+	paypals.minicarts.cart.on('checkout', function (evt) {
+		var items = prods.items(),
+			len = items.length,
+			total = 0,
+			i;
+
+		// Count the number of each item in the cart
+		for (i = 0; i < len; i++) {
+			total += items[i].get('quantity');
+		}
+
+		if (total < 3) {
+			alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+			evt.preventDefault();
+		}
+	});
+</script>
+<!-- //cart-js -->
+
+<!-- password-script -->
+<script>
+	window.onload = function () {
+		document.getElementById("password1").onchange = validatePassword;
+		document.getElementById("password2").onchange = validatePassword;
+	}
+
+	function validatePassword() {
+		var pass2 = document.getElementById("password2").value;
+		var pass1 = document.getElementById("password1").value;
+		if (pass1 != pass2)
+			document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+		else
+			document.getElementById("password2").setCustomValidity('');
+		//empty string means no validation error
+	}
+</script>
+<!-- //password-script -->
+
+<!-- imagezoom -->
+<script src="js/imagezoom.js"></script>
+<!-- //imagezoom -->
+
+<!-- flexslider -->
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+<script src="js/jquery.flexslider.js"></script>
+<script>
+	// Can also be used with $(document).ready()
+	$(window).load(function () {
+		$('.flexslider').flexslider({
+			animation: "slide",
+			controlNav: "thumbnails"
+		});
+	});
+</script>
+<!-- //FlexSlider-->
+
+<!-- smoothscroll -->
+<script src="js/SmoothScroll.min.js"></script>
+<!-- //smoothscroll -->
+
+<!-- start-smooth-scrolling -->
+<script src="js/move-top.js"></script>
+<script src="js/easing.js"></script>
+<script>
+	jQuery(document).ready(function ($) {
+		$(".scroll").click(function (event) {
+			event.preventDefault();
+
+			$('html,body').animate({
+				scrollTop: $(prods.hash).offset().top
+			}, 1000);
+		});
+	});
+</script>
+<!-- //end-smooth-scrolling -->
+
+<!-- smooth-scrolling-of-move-up -->
+<script>
+	$(document).ready(function () {
+		/*
+		var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+		};
+		*/
+		$().UItoTop({
+			easingType: 'easeOutQuart'
+		});
+
+	});
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+
+<!-- for bootstrap working -->
+<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- //js-files -->

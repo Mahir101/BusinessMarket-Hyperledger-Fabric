@@ -1,0 +1,145 @@
+<div class="agile-main-top">
+	<div class="container-fluid">
+		<div class="row main-top-w3l py-2">
+			<div class="col-lg-4 header-most-top">
+				<p class="text-white text-lg-left text-center">BebshaBazar Team
+					<i class="fas fa-shopping-cart ml-1"></i>
+				</p>
+			</div>
+			<div class="col-lg-8 header-right mt-lg-0 mt-2">
+				<!-- header lists -->
+				<ul>
+					<li class="text-center text-white">
+						<a href="/" class="text-white">
+							Home </a>
+					</li>
+					<li class="text-center text-white">
+						<a href="/about" class="text-white">
+							About US </a>
+					</li>
+					<li class="text-center text-white">
+						<a href="/contact" class="text-white">
+							Contact US </a>
+					</li>
+					<li class="dropdown">
+						
+							<button class="btn2 btn-primary2 dropdown-toggle" role="button" type="button" data-toggle="dropdown-menu">Pages
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="/">Home</a>
+									<hr>
+									<a class="dropdown-item" href="/about">About</a>
+									<hr>
+									<a class="dropdown-item" href="/terms">Terms & Conditions</a>
+									<hr>
+									<a class="dropdown-item" href="/contact">Contact</a>
+									<hr>
+									<a class="dropdown-item" href="/faqs">FAQs</a>
+									<hr>
+									<a class="dropdown-item" href="/privacy">Privacy</a>
+									<hr>
+									<a class="dropdown-item" href="/help">Get Help!</a>
+								</div>
+					
+					</li>
+
+
+					<li class="text-center border-right text-white">
+						<a href="/user/orders" class="text-white">
+							<i class="fas fa-truck mr-2"></i>Track Order</a>
+					</li>
+					<li class="text-center border-right text-white">
+						<i class="fas fa-phone mr-2"></i> 01712232327
+					</li>
+					{{#if session.email }}
+					<li class="text-center text-white">
+						<a href="/user/profile" class="text-white">
+							Your Profile </a>
+					</li>
+
+					<li class="text-center text-white">
+						<a href="/user/logout" class="text-white">
+							<i class="fas fa-sign-out-alt mr-2"></i>Logout</a>
+					</li>
+
+
+					{{else}}
+
+					<li class="text-center border-right text-white">
+						<a href="/user/signin" class="text-white">
+							<i class="fas fa-sign-in-alt mr-2"></i> Log In </a>
+					</li>
+
+					<li class="text-center text-white">
+						<a href="/user/signup" class="text-white">
+							<i class="fas fa-sign-out-alt mr-2"></i>Register </a>
+					</li>
+
+
+
+					{{/if}}
+					<li class="text-center text-white">
+						<a href="/seller/login" class="text-white">
+							<i class="fas fa-sign-out-alt mr-2"></i>Sell products </a>
+					</li>
+
+
+
+				</ul>
+				<!-- //header lists -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Button trigger modal(select-location) -->
+
+<!-- //shop locator (popup) -->
+
+
+
+
+<div class="header-bot">
+	<div class="container">
+		<div class="row header-bot_inner_wthreeinfo_header_mid">
+			<!-- logo -->
+			<div class="col-md-3 logo_agile">
+				<h1 class="text-center">
+					<a href="/" class="font-weight-normal text-white font-italic">
+						<img src="images/logo2.png" alt=" " class="img-fluid">Bebsh
+					</a>
+				</h1>
+			</div>
+			<!-- //logo -->
+			<!-- header-bot -->
+			<div class="col-md-9 header mt-4 mb-md-0 mb-4">
+				<div class="row">
+					<!-- search -->
+					<div class="col-10 agileits_search">
+						<form class="form-inline" id="searchbox" action="/search" method="post">
+						
+							<input id="searchit" name="searchit" class="form-control mr-sm-2" type="search"
+								placeholder="Search" aria-label="Search" required="">
+							<button class="btn my-2 my-sm-0" type="submit">Search</button>
+						
+						</form>
+					</div>
+
+					<div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
+						<div class="wthreecartaits wthreecartaits2 cart cart box_1">
+
+
+							<button class="btn w3view-cart" onclick="location.href='/Cart'">
+								<i class="fas fa-cart-arrow-down"></i>
+								<span class="badge">{{session.cart.totalQty}}</span>
+							</button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr>
+<hr>

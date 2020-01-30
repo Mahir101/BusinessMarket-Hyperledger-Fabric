@@ -1,0 +1,72 @@
+
+<div class="container-fluid"  style="margin-left:400px;margin-top:50px; margin-bottom:100px">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="container">
+                <h1>Add Product</h1>
+                <form action="/seller/add" method="post" enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" class="form-control" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="image">Image</label>
+                        <input type="file" id="image" name="file" class="form-control" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="description" id="description" name="description" class="form-control" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="price" id="price" name="price" class="form-control" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avail">Availability</label>
+                        <select id="avail" name="avail" class="form-control">
+                            <optgroup>
+                                <option value="YES">YES</option>
+                                <option value="NO">NO</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category" class="form-control">
+                            <optgroup>
+
+                                <option value="UTENSILS">UTENSILS</option>
+                                <option value="AGRICULTURAL">AGRICULTURAL</option>
+                                <option value="MCLOTHINGS">MEN's CLOTHINGS</option>
+                                <option value="WCLOTHINGS">Women's CLOTHINGS</option>
+
+                                <option value="TOOLS">TOOLS</option>
+                                <option value="TOYS">TOYS</option>
+                                <option value="HOUSEHOLD">HOUSEHOLD</option>
+
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="featured">Featured</label>
+                        <select id="featured" name="featured" class="form-control">
+                            <optgroup>
+                                <option value="YES">YES</option>
+                                <option value="NO">NO</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Add Product</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

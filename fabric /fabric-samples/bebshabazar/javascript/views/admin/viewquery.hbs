@@ -1,0 +1,23 @@
+<h1>Query Reviews by Admin</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            
+            <th>Email</th>
+            <th>Message</th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each ob}}
+        <tr>
+         
+            <td>{{this.Record.Email}}</td>
+            <td>{{this.Record.Qmessage}}</td>
+            
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

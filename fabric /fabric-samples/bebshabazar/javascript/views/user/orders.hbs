@@ -1,0 +1,23 @@
+<div class="row"  style="margin-top:50px; margin-bottom:100px">
+    <div class="col-md-8 col-md-offset-2">
+        <h2>My Orders</h2>
+        {{#each orders }}
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <ul class="list-group">
+                        {{#each this.Record.ItemName }}
+                            <li class="list-group-item">
+                                <span class="badge">৳{{ this.Price }}</span>
+                                {{ this.item.Record.Title }} | {{ this.qty }} Units
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <strong>Total Price: ৳{{ this.Record.Total }}</strong>
+                </div>
+                <a href="/user/track/{{this.Key}}" class="btn btn-primary">Track Progress</a>
+            </div>
+        {{/each}}
+    </div>
+</div>

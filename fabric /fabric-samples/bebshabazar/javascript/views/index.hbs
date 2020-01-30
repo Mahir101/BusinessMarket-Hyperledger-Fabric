@@ -1,0 +1,55 @@
+
+
+<h1>ADMIN MODE</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>KEY</th>
+            <th>Userid</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>STATE</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each ob}}
+        <tr>
+            <td>{{this.Key}}</td>
+           
+            <td>{{this.Record.Userid}}</td>
+             <td>{{this.Record.Name}}</td>
+              <td>{{this.Record.Address}}</td>
+            <td>
+                {{this.Record.State}}
+            </td>
+            <td>
+
+                <div>
+                    <form action="/admin/updateTrack/{{this.Key}}" method="POST">
+                        <select id="st" name="st">
+                            <optgroup>
+                                <option value="1">Order Received</option>
+                                <option value="2">Processing</option>
+                                <option value="3">In Transit</option>
+                                <option value="4">Product in warehouse</option>
+                                <option value="5">Delivered</option>
+                                <option value="6">Cancelled</option>
+                            </optgroup>
+                        </select>
+                        <input type="submit" name="submit" id="submit">
+                    </form>
+                </div>
+                
+                
+            </td>
+            <td>
+<a href="/admin/trackHistory/{{this.Key}}" class="btn btn-primary pull-right"> Download History</a>
+
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

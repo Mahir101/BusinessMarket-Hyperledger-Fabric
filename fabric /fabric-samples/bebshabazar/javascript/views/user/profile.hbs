@@ -1,0 +1,40 @@
+{{!-- <h1> {{info}}</h1> --}}
+<div class="container">
+    <div class="row profile">
+        <div class="col-md-3">
+            <div class="profile-sidebar">
+
+                <div class="profile-userpic">
+                    <img src="/Uploads/{{info.Image}}" class="img-responsive" alt="" >
+                </div>
+
+                <div class="profile-usertitle">
+                    <div class="profile-usertitle-name">
+                        NAME: {{info.Name}}
+                    </div>
+                    <div class="profile-usertitle-job">
+                        EMAIL: {{info.Email}}
+                    </div>
+                </div>
+                <a href="/user/editprofile"> 
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="profile-content">
+                <h4>AGE: {{info.Age}}</h4>
+                <br>
+                <h4>COUNTRY: {{info.Country}}</h4>
+                <br>
+                <h4>CITY: {{info.City}}</h4>
+                <br>
+                <h4>GENDER: {{info.Gender}}</h4>
+                <br>
+                <h4>PHONE: {{info.Phone}}</h4>
+            </div>>
+        </div>
+    </div>
+</div>

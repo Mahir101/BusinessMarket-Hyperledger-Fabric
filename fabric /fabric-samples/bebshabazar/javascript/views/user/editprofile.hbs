@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="container-login">
+                <h1>Update Your Profile</h1>
+                <form action="/user/editprofile" method="post" enctype="multipart/form-data">
+                    {{!-- <input type="hidden" name="_csrf" value="{{ csrfToken }}">  --}}
+                  {{!-- {{csrfToken}} --}}
+                    <div class="form-group"> 
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-control" value="{{info.Name}}" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="image">Image</label>
+                        <input type="file" id="image" name="file" class="form-control" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="text" id="age" name="age" class="form-control" value="{{info.Age}}" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" class="form-control" value="{{info.City}}" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="Country">Country</label>
+                        <input type="country" id="coutry" name="country" class="form-control" value="{{info.Country}}" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <input type="text" id="gender" name="gender" class="form-control" value="{{info.Gender}}" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" name="phone" class="form-control" value="{{info.Phone}}" required="">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
